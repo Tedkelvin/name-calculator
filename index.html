@@ -3,44 +3,87 @@
 
 <head>
   <title>Akanian Names</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
-  <div class="container">
-        <h1>Get Akan Name</h1>
-      <div class="container" <form id="form" action="index.html" method="post">
-        <label for="Date-of-birth">
-          Date:<input type"text" id"Date" Name"Date-of-birth" placeholder="DD" value="">
-          <br>
-        </label>
-      </div>
+  <h1> Get your akan name?<h1>
+  <div class="form-inline">
+       <form id="form-inline" onsubmit="return validateform()">
+          <label for="Date-of-birth">
+           Date:<input type="number" id="date" name="Date-of-birth" placeholder="DD" value="">
+           <br>
+          </label>
+         <label for="Month-of-birth">
+           Month:<input type="number" id="month" name="Month-of-bith" placeholder="MM" value="">
+           <br>
+         </label>
 
-      <div class="container" <form id="form" action="index.html" method="post">
-        <label for="Month-of-birth">
-          Month:<input type="text" id"Month" Name"Month-of-bith" placeholder="MM" value="">
-          <br>
-        </label>
-      </div>
 
-      <div class="container" <form id="form" action="index.html" method="post">
-        <label for="Year-0f-birth">
-          Year:<input type="text" id="Year" Name"Year-of-birth" placeholder="YYYY" value="">
-          <br>
-        </label>
-      </div>
 
-      <div class="container" <form id="form" action="index.html" method="post">
-        <label for="Gender">
-          Male:<input type="radio" id="Male" name="Male" placeholder="M">
-          Female:<input type="radio" id="Female" name="Female" placeholder="F">
-          <br>
-        </label>
+         <label for="Year-0f-birth">
+          Year:<input type="number" id="year" name="Year-of-birth" placeholder="YYYY" value="">
+           <br>
+         </label>
 
-        <input type="submit" value="submit"
 
-      </div>
+
+         <label for="Gender">
+          Male:<input type="checkbox" id="Male" name="gender" value="male">
+           Female:<input type="checkbox" id="Female" name="gender" value="female" >
+            <br>
+         </label>
+
+         <input type="submit" value="submit">
+         <input type="reset" value="RESET">
+      </form>
+  <!-- <link href="js/script.js"rel="stylesheet" type="text/js"> -->
   </div>
 
+
+  <script type="text/javascript">
+  function validateform() {
+     var gender = document.getElementsByName("gender");
+     var mdate = document.getElementById("date");
+     var mmonth = document.getElementById("month");
+     var myear = document.getElementById("year");
+     var formValid = false;
+     i = 0;
+
+     if (mdate.value == "" || mdate.value == null) {
+      alert("Please Input date");
+         return false;
+     }
+
+     if (mmonth.value == "" || mmonth.value == null) {
+      alert("Please Input Month");
+         return false;
+     }
+
+     if (myear.value == "" || myear.value == null) {
+      alert("Please Input year");
+         return false;
+     }
+
+     while(!formValid && i < gender.length) {
+       if(gender[i].checked){
+         alert("get name")
+       }
+       i++;
+     }
+       if(!formValid) {
+         alert("gender required")
+         return false
+       }
+       return formValid;
+     }
+
+
+
+
+  </script>
 </body>
 </html>
