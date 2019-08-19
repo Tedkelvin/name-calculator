@@ -1,0 +1,20 @@
+body {
+  background-color: lightblue;
+  background-image: (;
+
+  background-position: center;
+}
+h1 {
+  background-color: brown;
+  background-image: url("images/index.jpeg)");
+  font-style: oblique;
+  font-size: 50px;
+
+}
+
+div {
+  background-color: lightblue;
+}
+.container {
+  background-position: center;
+}
