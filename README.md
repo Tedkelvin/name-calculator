@@ -13,7 +13,7 @@ this program was developed by Ted Kelvin Mutwiri
 2.open the link and you can access the files you require and transfer to your favorite place.Then you open with a browser.
 
 ## BDD
-1.#Input
+   # Input
 
 Date-of-birth
 
@@ -23,13 +23,13 @@ Year-of-birth
 
 century-of-birth
 
-output
+   # output
 
 Akan name
 
 day-of-birth
 
-##Technologies used.
+## Technologies used.
 
 Html
 
@@ -37,8 +37,10 @@ Css
 
 Javascript
 
-###Contact Information
+## CONTACT INFORMATION
+
 You can contact me through my email :<a>tedmutwiri19@gmail.com</a>
 
-##Copyright Information and License.
+## Copyright Information and License.
+
 This program was licensed by Mit License.
