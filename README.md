@@ -13,7 +13,7 @@ this program was developed by Ted Kelvin Mutwiri
 2.open the link and you can access the files you require and transfer to your favorite place.Then you open with a browser.
 
 ## BDD
-   # Input
+   ### Input
 
 Date-of-birth
 
@@ -23,7 +23,7 @@ Year-of-birth
 
 century-of-birth
 
-   # output
+   ### output
 
 Akan name
 
