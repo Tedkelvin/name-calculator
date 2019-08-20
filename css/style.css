@@ -1,6 +1,6 @@
 body {
   background-color: lightblue;
-  background-image: (;
+  background-image:url(images/index.jpeg);
 
   background-position: center;
 }
@@ -10,10 +10,6 @@ h1 {
   font-size: 50px;
 
 }
-
-div {
-  background-color: lightblue;
-}
-.container {
-  background-position: center;
+button {
+  color:black;
 }
