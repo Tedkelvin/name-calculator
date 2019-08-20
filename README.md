@@ -15,27 +15,27 @@ this program was developed by Ted Kelvin Mutwiri
 ## BDD
    ### Input
 
-Date-of-birth
+* Date-of-birth
 
-Month-of-birth
+* Month-of-birth
 
-Year-of-birth
+* Year-of-birth
 
-century-of-birth
+* century-of-birth
 
    ### output
 
-Akan name
+* Akan name
 
-day-of-birth
+* day-of-birth
 
 ## Technologies used.
 
-Html
+* Html
 
-Css
+* Css
 
-Javascript
+* Javascript
 
 ## CONTACT INFORMATION
 
