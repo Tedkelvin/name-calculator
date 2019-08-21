@@ -13,7 +13,7 @@
   <h1> Get your akan name?</h1>
   <p>Akan names a derived from ghana culture.so this webpage will help you to get you akan name regarding your date of birth ,month and year</P>
   <div class="form-inline">
-    <form id="form-inline" onsubmit="return validationform()">
+    <form id="form-inline" >
       <label for="Date-of-birth">
         Date:<input type="number" id="date" name="Date-of-birth" placeholder="DD" value="">
         <br>
@@ -42,164 +42,21 @@
 
 
       <label for="Gender">
-        Male:<input type="checkbox" id="Male" name="gender" value="male">
-        Female:<input type="checkbox" id="Female" name="gender" value="female">
+        Male:<input type="checkbox" id="Male" name="gender" value="Male">
+        Female:<input type="checkbox" id="Female" name="gender" value="Female">
         <br>
         <br>
       </label>
     </form>
-    <a href="#result"><button type="button" onclick="checkdayofweek">Get Name</button></a>
+    <button type="button" onclick="validateform()">Get Name</button>
 
-    <input type="reset" value="RESET" onclick="deleteinput">
+    <input type="reset" value="RESET" ">
     <h2 id="result"></h2>
 
-    <!-- <link href="js/script.js"rel="stylesheet" type="text/js"> -->
+
   </div>
 
-
-  <script type="text/javascript">
-    function validateform() {
-      var gender = document.getElementsByName("gender");
-      var mdate = document.getElementById("date");
-      var mmonth = document.getElementById("month");
-      var myear = document.getElementById("year");
-      var mcentury = document.getElementById("century")
-      var formValid = false;
-      i = 0;
-
-      if (mdate.value == "" || mdate.value == null) {
-        alert("Please Input date");
-        return false;
-      } else if (mdate.value < 1) {
-        alert("invalid Date!");
-        return false;
-      } else {
-        if (mdate.value > 31) {
-          alert("invalid date!");
-          return false;
-        }
-      }
-
-
-      if (mmonth.value == "" || mmonth.value == null) {
-        alert("Please Input Month");
-        return false;
-      } else if (mmonth.value < 0) {
-        alert("invalid Month");
-        return false;
-      } else {
-        if ("mmonth.value > 12") {
-          alert("invalid Month");
-          return false;
-        }
-      }
-
-      if (myear.value == "" || myear.value == null) {
-        alert("Please Input year");
-        return false;
-      }
-
-      while (!formValid && i < gender.length) {
-        if (gender[i].checked) {
-          alert("get name")
-
-        }
-        i++;
-      }
-      if (!formValid) {
-        alert("gender required")
-        return false
-      }
-      return formValid;
-    }
-
-    function calculateDay() {
-      validateform();
-      dayoftheweek = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7) - 1;
-    console.log(dayofweek);
-    return (math.floor(dayofweek));
-    if (dayofweek < 0) {
-      dayofweek = dayofweek * -1;
-    } else if (dayofweek > 0) {
-      return dayofweek;
-    }
-
-    }
-
-    function checkdayofweek() {
-      day = calculateDay();
-      checkgender();
-      console.log("the function runs")
-    }
-
-    let dayofweek = ["Sunday", "Monday", "Tuesday", "Wensday", "Thursday", "Friday", "Saturday"]
-    let maleNames = ["kwasi", "kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame"]
-
-    function checkgender() {
-      var gen = document.getElementById("Gender");
-      if (gen[0].checked == true) {
-        var gender = "male";
-      } else if (gen[1].checked == true) {
-        var gender = "Female";
-      } else {
-        console.log("pass");
-      }
-    }
-
-    switch (gender) {
-      case gender = "male":
-        switch (day) {
-          case (0 || -0):
-            document.getElementById("result").innerHTML = "The day is on a Sunday." + "" + "Your akan name is" + maleNames[0];
-            break;
-          case (1 || -1):
-            document.getElementById("result").innerHTML = "The day is on a Monday." + "" + "Your akan name is" + maleNames[1];
-            break;
-          case (2 || -2):
-            document.getElementById("result").innerHTML = "The day is on a Tuesday." + "" + "Your akan name is" + maleNames[2];
-            break;
-          case (3 || -3):
-            document.getElementById("result").innerHTML = "The day is on a Wensday." + "" + "Your akan name is" + maleNames[3];
-            break;
-          case (4 || -4):
-            document.getElementById("result").innerHTML = "The day is on a Thursday." + "" + "Your akan name is" + maleNames[4];
-            break;
-          case (5 || -5):
-            document.getElementById("result").innerHTML = "The day is on a Friday." + "" + "Your akan name is" + maleNames[4];
-            break
-          case (6 || -6):
-            document.getElementById("result").innerHTML = "The day is on a Saturday." + "" + "Your akan name is" + maleNames[6];
-            break;
-          default:
-        }
-        break;
-      case Gender = "female"
-      switch (day) {
-        case (0 || -0):
-          document.getElementById("result").innerHTML = "The day is on a Sunday." + "" + "Your akan name is" + Your akan name is AKosua;
-          break;
-        case (1 || -1):
-          document.getElementById("result").innerHTML = "The day is on a Monday." + "" + "Your akan name is" + Your akan name is Adwoa;
-          break;
-        case (2 || -2):
-          document.getElementById("result").innerHTML = "The day is on a Tuesday." + "" + "Your akan name is" + Your akan name is Abenaa;
-          break;
-        case (3 || -3):
-          document.getElementById("result").innerHTML = "The day is on a Wensday." + "" + "Your akan name is" + Your akan name is AKua;
-          break;
-        case (4 || -4):
-          document.getElementById("result").innerHTML = "The day is on a Thursday." + "" + "Your akan name is" + Your akan name is Yaa;
-          break;
-        case (5 || -5):
-          document.getElementById("result").innerHTML = "The day is on a Friday." + "" + "Your akan name is" + Your akan name is Afua;
-          break
-        case (6 || -6):
-          document.getElementById("result").innerHTML = "The day is on a Saturday." + "" + "Your akan name is" + Your akan name is Ama;
-          break;
-        default:
-      }
-    }
-  </script>
+<script src="js/script.js"></script>
 </body>
 
 </html>
